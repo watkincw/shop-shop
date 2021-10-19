@@ -42,7 +42,7 @@ const Cart = () => {
                         <CartItem key={ item._id } item={ item } />
                     )) }
                     <div className="flex-row space-between">
-                        <string>Total: $0</string>
+                        <string>Total: ${ calculatedTotal() }</string>
                         {
                             Auth.loggedIn() ?
                                 <button>
@@ -55,7 +55,7 @@ const Cart = () => {
                 </div>
             ) : (
                 <h3>
-                    <span tole="img" aria-label="shocked">
+                    <span role="img" aria-label="shocked">
                         😱
                     </span>
                     You havn't added anything to your cart yet!
